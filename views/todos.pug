@@ -1,0 +1,18 @@
+h1 Todos list
+
+h2 Search
+ul
+  each val in todosList
+    li=val
+    
+form(method="GET")
+  input(type="text", name="q")
+  button Search
+
+h2 Create
+form(action="/todos/create", method="POST")
+  lable Todo:
+  br
+  input(type="text", name="todo")
+  button create
+  
